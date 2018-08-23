@@ -1,0 +1,11 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Http\Request;
+use LazyLaravel\LazyController;
+
+class DummyClass extends LazyController
+{
+    // I'm too lazy to write any code.
+}

@@ -1,0 +1,16 @@
+{
+  "name": "bruce/lazy-laravel",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "LazyLaravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LazyLaravel\\": "src/"
+    }
+  },
+  "require": {}
+}
