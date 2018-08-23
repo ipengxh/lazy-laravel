@@ -22,8 +22,8 @@ class LazyGeneratorCommand extends Command
     {--without-model : Do not create model}
     {--without-requests : Do not create request validators}
     {--without-views : Do not create blade view files}
-    {--use-model : Force model for lazy suite}
-    {--view-path : Force blade views path for lazy suite}";
+    {--model= : Generate lazy suite for the given model}
+    {--view-path : Generate blade view files in the given path}";
 
     /**
      * The console command description.
