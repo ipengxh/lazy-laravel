@@ -1,7 +1,8 @@
 <?php
 namespace LazyLaravel;
 use Illuminate\Support\ServiceProvider;
-use LazyLaravel\Commands\LazyGeneratorCommand;
+use LazyLaravel\Commands\LazyModelsGeneratorCommand;
+use LazyLaravel\Commands\LazySuiteGeneratorCommand;
 
 /**
  * Created by Bruce Peng.
@@ -13,14 +14,23 @@ class LazyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerCommand();
+        $this->registerVendorPublisher();
     }
 
     protected function registerCommand()
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                LazyGeneratorCommand::class
+                LazySuiteGeneratorCommand::class,
+                LazyModelsGeneratorCommand::class
             ]);
         }
+    }
+
+    protected function registerVendorPublisher()
+    {
+        $this->publishes([
+            __DIR__.'/config' => config_path(),
+        ]);
     }
 }

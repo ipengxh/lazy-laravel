@@ -8,5 +8,7 @@ return [
      * json: json response forever
      * auto: response type depends on request
      */
-    'response' => 'auto'
+    'response' => env('LAZY_RESPONSE', 'auto'),
+
+    'model_path' => env('LAZY_MODEL_PATH', 'app/Models')
 ];
